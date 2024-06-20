@@ -1,0 +1,21 @@
+.header {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  height: 70px;
+  width: 100%;
+
+}
+.logo{
+  max-width: 169px;
+  height: 29px 29px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
