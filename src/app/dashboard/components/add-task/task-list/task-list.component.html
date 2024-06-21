@@ -9,8 +9,8 @@
            <input type="text" class="input-field" placeholder="Buscar..." [(ngModel)]="searchTerm" (input)="filterTasks()"/>
          </div>
        </div>
-       <div class="tasks-table">
-         <table>
+       <div >
+         <table class="tasks-table">
              <thead>
                  <tr class="encabezado">
                      <th>Id</th>
@@ -33,16 +33,16 @@
          <nav class="page" aria-label="page">
            <ul class="pagination">
              <li class="page-item" [class.disabled]="page === 1">
-               <a class="page-link" (click)="page = page - 1" aria-label="Previous">
-                 <span aria-hidden="true">&laquo;</span>
+               <a class="page-link-angle" (click)="page = page - 1" aria-label="Previous">
+                  <i class="fas fa-angle-left" style="color: #3DB0E3;"></i>
                </a>
              </li>
              <li class="page-item" *ngFor="let pageNums of [].constructor(totalPages); let i = index" [class.active]="page === i + 1">
                <a class="page-link" (click)="page = i + 1">{{ i + 1 }}</a>
              </li>
              <li class="page-item" [class.disabled]="page === totalPages">
-               <a class="page-link" (click)="page = page + 1" aria-label="Next">
-                 <span aria-hidden="true">&raquo;</span>
+               <a class="page-link-angle" (click)="page = page + 1" aria-label="Next">
+                 <i class="fas fa-angle-right" style="color: #3DB0E3;"></i>
                </a>
              </li>
            </ul>
