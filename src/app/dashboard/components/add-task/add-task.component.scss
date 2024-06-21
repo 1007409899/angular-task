@@ -16,8 +16,17 @@
   margin-right: 170px;
 }
 
+input[type="checkbox"] {
+  accent-color: #11806A !important;
+  font-size: 20px
+}
+.checkbox{
+  width: 19px;
+  height: 18px;
+  /* UI Properties */
 
 
+}
 .button {
   align-self: flex-start;
   background-color: white;
@@ -107,26 +116,8 @@ opacity: 1;
 .input-field::placeholder {
   color : #FFFFFF99;
 }
-.checkbox{
-  text-align: left;
-  font: normal normal normal 16px/24px Roboto;
-  letter-spacing: 0.5px;
-  color: #FFFFFFDE;
-}
-// estyle input checkbox
 
-input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 18px;
-height: 18px;
-/* UI Properties */
-background: #EFEFEF 0% 0% no-repeat padding-box;
-border: 1px solid #EFEFEF;
-box-shadow:    8px 3px 6px #ebebeb29;
-  cursor: pointer;
-}
+
 
 .checkmark {
  margin-right: 15px;

@@ -1,0 +1,259 @@
+.main-container {
+  margin-left: 193px;
+  margin-right: 193px;
+}
+
+.pages {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: 0px;
+
+}
+
+.container-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.container-first-title {
+  display: flex;
+  margin-bottom: 20px;
+}
+.icon-list{
+  margin-top: 4px;
+}
+.first-title {
+  font: normal normal bold 25px/24px Roboto;
+  letter-spacing: 0.78px;
+  color: #4B9F8E;
+  opacity: 1;
+  margin-left: 8px;
+}
+
+.input-field {
+  text-align: left;
+  font: normal normal normal 20px/24px Roboto;
+  letter-spacing: 0.62px;
+  color: #d41919de;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #0EC4C4;
+  border-radius: 23px;
+  padding: 4px;
+  width: 100%;
+  max-width: 479px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-bar button[type="button"] {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tasks-table {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* Añadir scroll horizontal si es necesario */
+}
+
+.tasks-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tasks-table th,
+.tasks-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+}
+
+.tasks-table th {
+  background-color: #f2f2f2;
+}
+/* Cambia el color del checkbox */
+input[type="checkbox"] {
+  accent-color: #11806A;
+  margin-right: 15px;
+  width: 16px;
+  height: 18px;
+}
+.checkbox{
+  margin-right: 15px;
+  width: 136px;
+  height: 21px;
+  /* UI Properties */
+
+
+}
+.tasks-table input[type="checkbox"] {
+  margin: 0 10px;
+  background-color: red !important;
+}
+
+.tasks-table button[type="button"] {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.table {
+  max-width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.tasks-table td {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center; /* Centra el contenido horizontalmente */
+
+  font: normal normal normal 20px/24px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #707070;
+}
+.tasks-table td input {
+  background-color: red;
+}
+.table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+
+}
+.btn i {
+  color: #EF0C0C; /* Cambia el color del icono a rojo */
+  font-size: 1.25rem; /* Ajusta el tamaño del icono si es necesario */
+}
+.btn {
+  background: none; /* Remueve el fondo del botón */
+  border: none; /* Remueve el borde del botón */
+  padding: 0; /* Remueve el padding del botón */
+  cursor: pointer; /* Cambia el cursor a pointer para indicar que es clickeable */
+}
+.encabezado th{
+  background-color:#FFFFFF  ;
+  font: normal normal normal 20px/24px Roboto;
+  letter-spacing: 0.62px;
+  color: #11766A;
+  text-align: center;
+  //colocar mas grueso el texto
+  font-weight: bold;
+}
+.completed-task {
+  text-decoration: line-through;
+  color: grey; /* Opcional: cambiar el color del texto para tareas completadas */
+}
+.btn:hover i {
+  color: darkred; /* Cambia el color del icono al pasar el mouse */
+}
+
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.page-item {
+  margin: 0 0.25rem;
+  cursor: pointer;
+
+}
+
+.page-item.disabled .page-link {
+  pointer-events: none;
+  cursor: auto;
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #FFC183;
+  border-color: #64676a;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.3rem 0.45rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #fff;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 9px;
+  background-color: #D0D0D0;
+  border: 1px solid #dee2e6;
+}
+
+.page-link:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    width: 100%;
+    margin: 10px auto; /* Ajusta el margen para móviles */
+  }
+
+  h1 {
+    font-size: 20px; /* Ajusta el tamaño del título para móviles */
+  }
+
+  .search-bar {
+    flex-direction: column; /* Ordena los elementos en columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+  }
+
+  .tasks-table {
+    font-size: 14px; /* Ajusta el tamaño de la fuente para móviles */
+  }
+}

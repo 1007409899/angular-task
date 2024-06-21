@@ -5,24 +5,26 @@
       <label class="first-title">Nueva Tarea</label>
     </div>
     <label >Título</label>
-    <div class="container-add">
+    <form class="container-add"   [formGroup]="form">
     <div class="input-container">
-      <input type="text" class="input-field" placeholder="Ingrese titulo..." />
+      <input formControlName="title" type="text" class="input-field" placeholder="Ingrese titulo..." />
     </div>
     <label>
       <div class="container-checkbox">
         <div class="checkmark">Tarea completada</div>
-        <div class="checkbox">
-          <input  type="checkbox">
-        </div>
+
+          <input class="checkbox" formControlName="completed" type="checkbox">
+
       </div>
     </label>
-    <button class="container-button-guardar">
+    <button class="container-button-guardar" (click)="saveTask()">
       <div class="signo-mas">+</div>
       <div>
         <div class="button">Guardar Tarea</div>
       </div>
     </button>
-  </div>
+  </form>
   </div>
 </div>
+
+<app-task-list   (propagar)="procesaPropagar($event)" />
