@@ -1,6 +1,7 @@
 .main-container {
   margin-left: 193px;
   margin-right: 193px;
+  position: relative;
 }
 
 .pages {
@@ -128,11 +129,12 @@ input[type="checkbox"] {
   color: #fff;
 }
 
-.table {
+table {
   max-width: 100%;
   margin-bottom: 1rem;
   color: #212529;
   border-collapse: collapse;
+
 }
 
 .table th,
@@ -260,6 +262,39 @@ input[type="checkbox"] {
   border-color: #dee2e6;
 }
 
+.logo-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 0;
+}
+
+.logo {
+  max-height: 50px; /* Ajusta según el tamaño de tu logo */
+}
+
+.bottom-right-link {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+ cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* Center children horizontally */
+
+}
+
+.bottom-right-link a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.bottom-right-link i {
+  margin-right: 5px;
+}
 @media (max-width: 768px) {
   .main-container {
     width: 100%;
@@ -282,5 +317,14 @@ input[type="checkbox"] {
     flex-direction: column;
     margin: 20px;
   }
+ .tasks-table {
+   max-width: 100%;
+ }
+ .bottom-right-link {
 
+  position: relative;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
 }
