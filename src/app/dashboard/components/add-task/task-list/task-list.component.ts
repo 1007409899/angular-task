@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, OnInit, Output, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { TaskService } from '../../../services/task.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -15,9 +15,6 @@ import { ResponseTask } from '../../../interfaces/task.interface';
   styleUrls: ['./task-list.component.scss'],
 })
 export class TaskListComponent implements OnInit {
-  @Output()
-  propagar = new EventEmitter<ResponseTask>();
-
   todoService = inject(TaskService);
 
   todos: any[] = [];
@@ -60,7 +57,7 @@ export class TaskListComponent implements OnInit {
 
   filterTasks(): void {
     this.filteredTodos = this.todos.filter(todo =>
-      todo.title.toLowerCase().includes(this.searchTerm.toLowerCase())
+      todo.title.includes(this.searchTerm.toLowerCase())
     );
     this.collectionSize = this.filteredTodos.length;
   }
@@ -75,5 +72,25 @@ export class TaskListComponent implements OnInit {
 
   get totalPages(): number {
     return Math.ceil(this.collectionSize / this.pageSize);
+  }
+
+  isLastPage(): boolean {
+    return this.page >= this.totalPages;
+  }
+
+  isFirstPage(): boolean {
+    return this.page <= 1;
+  }
+
+  previousPage(): void {
+    if (!this.isFirstPage()) {
+      this.page--;
+    }
+  }
+
+  nextPage(): void {
+    if (!this.isLastPage()) {
+      this.page++;
+    }
   }
 }

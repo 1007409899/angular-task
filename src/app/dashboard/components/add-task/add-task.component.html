@@ -4,27 +4,25 @@
       <div class="add">+</div>
       <label class="first-title">Nueva Tarea</label>
     </div>
-    <label >Título</label>
-    <form class="container-add"   [formGroup]="form">
-    <div class="input-container">
-      <input formControlName="title" type="text" class="input-field" placeholder="Ingrese titulo..." />
-    </div>
-    <label>
-      <div class="container-checkbox">
-        <div class="checkmark">Tarea completada</div>
-
+    <label>Título</label>
+    <form class="container-add" [formGroup]="form">
+      <div class="input-container">
+        <input formControlName="title" type="text" class="input-field" placeholder="Ingrese titulo..." />
+      </div>
+      <label>
+        <div class="container-checkbox">
+          <div class="checkmark">Tarea completada</div>
           <input class="checkbox" formControlName="completed" type="checkbox">
-
-      </div>
-    </label>
-    <button class="container-button-guardar" (click)="saveTask()">
-      <div class="signo-mas">+</div>
-      <div>
-        <div class="button">Guardar Tarea</div>
-      </div>
-    </button>
-  </form>
+        </div>
+      </label>
+      <button class="container-button-guardar" (click)="saveTask()">
+        <div class="signo-mas">+</div>
+        <div>
+          <div class="button">Guardar Tarea</div>
+        </div>
+      </button>
+    </form>
   </div>
 </div>
 
-<app-task-list   (propagar)="procesaPropagar($event)" />
+<app-task-list />

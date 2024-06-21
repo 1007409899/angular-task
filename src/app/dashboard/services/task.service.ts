@@ -24,7 +24,7 @@ export class TaskService {
     return this.http.put<any>(`${this.apiUrl}/${id}`, todo);
   }
 
-  createTodo(todo: any): Observable<any> {
+  createTodo(todo: ResponseTask): Observable<any> {
     return this.http.post<any>(this.apiUrl, todo);
   }
 }

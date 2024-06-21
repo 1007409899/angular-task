@@ -16,9 +16,7 @@ import { ResponseTask } from '../../interfaces/task.interface';
   styleUrl: './add-task.component.scss',
 })
 export class AddTaskComponent {
-// viewchild  para acceder a los métodos del componente hijo
    @ViewChild(TaskListComponent) taskList!: TaskListComponent;
-  // crear rective form
   build = inject(FormBuilder)
   todoService = inject(TaskService)
   form = this.build.group({
@@ -27,11 +25,9 @@ export class AddTaskComponent {
   });
 
   saveTask(): void {
-    // Aquí se implementa la lógica para guardar la tarea
-    const task = this.form.value;
+    const task: ResponseTask = this.form.value as ResponseTask
     this.todoService.createTodo(task).subscribe((res) => {
      if(res){
-      console.log('Task added successfully!', res);
       this.taskList.fetchTodos();
       this.form.reset();
      }
